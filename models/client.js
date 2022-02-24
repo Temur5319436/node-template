@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define('Clients', {
+  sequelize.define("Clients", {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -30,7 +30,7 @@ module.exports = (sequelize) => {
     },
     gender: {
       allowNull: true,
-      type: DataTypes.ENUM(['Erkak', 'Ayol']),
+      type: DataTypes.ENUM(["Erkak", "Ayol"]),
     },
     address: {
       allowNull: true,

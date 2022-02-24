@@ -1,12 +1,16 @@
-const express = require('express');
+const express = require("express");
+const http = require("http");
+const cors = require("cors");
 
 const app = express();
-const http = require('http');
+
+app.use(cors());
+app.use(express.json());
 
 const server = http.createServer(app);
 
-const api = require('./api');
+const api = require("./api");
 
-app.use('/api', api);
+app.use("/api", api);
 
-module.export = server;
+module.exports = server;

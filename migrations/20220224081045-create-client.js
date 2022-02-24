@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 
 module.exports = {
   async up(queryInterface) {
-    await queryInterface.createTable('Clients', {
+    await queryInterface.createTable("Clients", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -31,7 +31,7 @@ module.exports = {
       },
       gender: {
         allowNull: true,
-        type: DataTypes.ENUM(['Erkak', 'Ayol']),
+        type: DataTypes.ENUM(["Erkak", "Ayol"]),
       },
       address: {
         allowNull: true,
@@ -52,6 +52,6 @@ module.exports = {
     });
   },
   async down(queryInterface) {
-    await queryInterface.dropTable('Clients');
+    await queryInterface.dropTable("Clients");
   },
 };

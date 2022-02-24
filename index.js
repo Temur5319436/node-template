@@ -1,7 +1,9 @@
-const sequelize = require('./models');
+require("dotenv").config();
+const sequelize = require("./models");
+const server = require("./app/server");
 
-const main = async () => {
+const { PORT, HOST } = process.env;
+
+server.listen(PORT, HOST, async () => {
   await sequelize.authenticate();
-};
-
-main();
+});
